@@ -2,12 +2,27 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/about">About</router-link> |
+      <router-link :to="`/details/${name}`">Details </router-link>
     </div>
-    <router-view/>
+
+    <v-container>
+      <v-row>
+        <v-text-field label="Name" v-model="name" solo></v-text-field>
+      </v-row>
+    </v-container>
+
+    <router-view />
   </div>
 </template>
-
+<script>
+  export default {
+    name: 'App',
+    data: () => ({
+      name: undefined
+    }),
+  }
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

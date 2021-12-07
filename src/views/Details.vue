@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <HelloWorld msg="Bonjour !"/>
+    <HelloWorld :msg="`Bonjour ${ name }`"/> 
   </div>
 </template>
 
@@ -9,7 +9,12 @@
 import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
-  name: 'About',
+  name: 'Details',
+  data() {
+    return {
+      name: this.$route.params.name
+    }
+  },
   components: {
     HelloWorld
   }
