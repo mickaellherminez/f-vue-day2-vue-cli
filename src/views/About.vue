@@ -12,6 +12,16 @@ export default {
   name: 'About',
   components: {
     HelloWorld
-  }
+  },
+  data() {
+    return {
+    }
+  },
+  methods: {
+  },
+  mounted () {
+  },
+  watch: {
+  },
 }
 </script>
